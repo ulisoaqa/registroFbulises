@@ -26,8 +26,9 @@ public class MyDriverAppium {
 		caps.setCapability("platformVersion", "9");
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("autoGrantPermissions", true);
-		caps.setCapability("noReset", true);
+		caps.setCapability("noReset", false);
 		caps.setCapability("app", app.getAbsolutePath());
+		caps.setCapability("clearSystemFiles", true);
 
 		try {
 			driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub/"), caps);

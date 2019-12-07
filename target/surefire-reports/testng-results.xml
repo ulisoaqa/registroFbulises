@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="MySuiteAppium" duration-ms="28987" started-at="2019-12-07T11:06:25 CST" finished-at="2019-12-07T11:06:54 CST">
+  <suite name="MySuiteAppium" duration-ms="31016" started-at="2019-12-07T11:33:13 CST" finished-at="2019-12-07T11:33:44 CST">
     <groups>
     </groups>
-    <test name="MyTestAppium" duration-ms="28987" started-at="2019-12-07T11:06:25 CST" finished-at="2019-12-07T11:06:54 CST">
+    <test name="MyTestAppium" duration-ms="31016" started-at="2019-12-07T11:33:13 CST" finished-at="2019-12-07T11:33:44 CST">
       <class name="com.facebook.lite.InicioTest">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="BeforeSuite" is-config="true" duration-ms="7836" started-at="2019-12-07T11:06:25 CST" finished-at="2019-12-07T11:06:33 CST">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="BeforeSuite" is-config="true" duration-ms="9028" started-at="2019-12-07T11:33:13 CST" finished-at="2019-12-07T11:33:22 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="validationTest()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="validationTest" duration-ms="21122" started-at="2019-12-07T11:06:33 CST" finished-at="2019-12-07T11:06:54 CST">
+        <test-method status="PASS" signature="validationTest()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="validationTest" duration-ms="21968" started-at="2019-12-07T11:33:22 CST" finished-at="2019-12-07T11:33:44 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validationTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="afterTest" is-config="true" duration-ms="591" started-at="2019-12-07T11:06:54 CST" finished-at="2019-12-07T11:06:54 CST">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.facebook.lite.InicioTest@47c62251]" name="afterTest" is-config="true" duration-ms="487" started-at="2019-12-07T11:33:44 CST" finished-at="2019-12-07T11:33:45 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

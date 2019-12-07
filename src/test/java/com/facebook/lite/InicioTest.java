@@ -15,8 +15,8 @@ public class InicioTest extends BaseTest {
         inicioPage.registrarNombre();
         inicioPage.registrarApellido();
         inicioPage.continuarRegistroNombres();
-        inicioPage.deny();
-        inicioPage.deny();
+        //inicioPage.deny();
+        //inicioPage.deny();
         inicioPage.registrarNumero();
         inicioPage.registrarFecha();
         inicioPage.genero();
