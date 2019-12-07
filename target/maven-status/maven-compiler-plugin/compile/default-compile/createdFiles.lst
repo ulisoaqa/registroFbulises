@@ -1,0 +1,5 @@
+pages/RegistroNombresTest.class
+coreappium/MyDriverAppium.class
+pages/InicioPage.class
+com/facebook/lite/App.class
+pages/BasePage.class

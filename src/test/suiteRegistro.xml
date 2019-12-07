@@ -1,0 +1,8 @@
+<suite name="MySuiteAppium">
+
+	<test name="MyTestAppium">
+		<classes>
+			<class name="com.facebook.lite.RegistroNombresTest"></class>	
+		</classes>
+	</test>
+</suite>
