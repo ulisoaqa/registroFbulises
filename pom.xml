@@ -47,7 +47,7 @@
 
 	<profiles>
 		<profile>
-			<id>Inicio</id>
+			<id>InicioFB</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -73,7 +73,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>Registro</id>
+			<id>RegistroFB</id>
 			<build>
 				<plugins>
 					<plugin>

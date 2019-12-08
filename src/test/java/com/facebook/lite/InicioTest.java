@@ -8,18 +8,18 @@ import com.facebook.lite.BaseTest;
 public class InicioTest extends BaseTest {
 	@Test()
 	public void validationTest() {
-		System.out.println("Se hace prueba de registro"+myDriver);
+		System.out.println("Test RegisterFB"+ myDriver);
 		InicioPage inicioPage = new InicioPage(myDriver);
-        inicioPage.registroCuenta();
-        inicioPage.continuarRegistroCuenta();
-        inicioPage.registrarNombre();
-        inicioPage.registrarApellido();
-        inicioPage.continuarRegistroNombres();
-        //inicioPage.deny();
-        //inicioPage.deny();
-        inicioPage.registrarNumero();
-        inicioPage.registrarFecha();
-        inicioPage.genero();
-        inicioPage.password();
+        inicioPage.btnCreateFacebookAccount();
+        inicioPage.btnNextFacebookAccount();
+        inicioPage.registerName();
+        inicioPage.registerLastName();
+        inicioPage.btnNextRegisterName();
+        inicioPage.alertDenyPermission();
+        inicioPage.alertDenyPermission2();
+        inicioPage.registerPhone();
+        inicioPage.registerBirthDay();
+        inicioPage.genus();
+        inicioPage.RegisterPassword();
 	}
 }

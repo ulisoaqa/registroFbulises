@@ -22,102 +22,135 @@ public class InicioPage extends BasePage{
 		return titleIntroduction.isDisplayed();
 	}
     
-	public void registroCuenta() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup"));
-		AndroidElement registrar = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup");
-		registrar.click();
+	public void btnCreateFacebookAccount() {
+		String btnxPathFacebookAccount = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup";
+		waitVisibility(By.xpath(btnxPathFacebookAccount));
+		AndroidElement btnRegistrar = getDriver().findElementByXPath(btnxPathFacebookAccount);
+		btnRegistrar.click();
 	}
 	
-	public void continuarRegistroCuenta() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]"));
-		AndroidElement continuarNext = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]");
+	public void btnNextFacebookAccount() {
+		String btnPathNextFacebookAccount = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]";
+		waitVisibility(By.xpath(btnPathNextFacebookAccount));
+		AndroidElement continuarNext = getDriver().findElementByXPath(btnPathNextFacebookAccount);
 		continuarNext.click();
 	}
 	
-	public void registrarNombre() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[1]"));
-		AndroidElement registroNombre = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[1]");
+	public void registerName() {
+		String EditTexNamePath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[1]";
+		waitVisibility(By.xpath(EditTexNamePath));
+		AndroidElement registroNombre = getDriver().findElementByXPath(EditTexNamePath);
 		registroNombre.click();
-		registroNombre.sendKeys("Karen");
-		
+		registroNombre.sendKeys("Ulises Francisco");	
 	}
 	
-	public void registrarApellido() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[2]"));
-		AndroidElement registroApellido = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[2]");
+	public void registerLastName() {
+		String EditTexLastNamePath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView[2]";
+		waitVisibility(By.xpath(EditTexLastNamePath));
+		AndroidElement registroApellido = getDriver().findElementByXPath(EditTexLastNamePath);
 		registroApellido.click();
-		registroApellido.sendKeys("Gama");
+		registroApellido.sendKeys("Soto Arroyo");
 	}
 	
-	public void continuarRegistroNombres() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]"));
-		AndroidElement continuarNext = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]");
+	public void btnNextRegisterName() {
+		String btnNextPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]";
+		waitVisibility(By.xpath(btnNextPath));
+		AndroidElement continuarNext = getDriver().findElementByXPath(btnNextPath);
 		continuarNext.click();
 	}
 	
-	public void deny() {
-		waitVisibility(By.id("com.android.packageinstaller:id/permission_deny_button"));
-		AndroidElement deny = getDriver().findElementById("com.android.packageinstaller:id/permission_deny_button");
+	public void alertDenyPermission() {
+		String btnDenyid= "com.android.packageinstaller:id/permission_deny_button";
+		waitVisibility(By.id(btnDenyid));
+		AndroidElement deny = getDriver().findElementById(btnDenyid);
 		deny.click();
 	}
 	
-	public void registrarNumero() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView"));
-		AndroidElement numero = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView");
-		numero.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView"));
-		numero.clear();
-		numero.sendKeys("5572808148");
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[5]"));
-		AndroidElement continuarNumero = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[5]");
-		continuarNumero.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[5]"));
+	public void alertDenyPermission2() {
+		String btnAllowid= "com.android.packageinstaller:id/permission_allow_button";
+		waitVisibility(By.id(btnAllowid));
+		AndroidElement allow = getDriver().findElementById(btnAllowid);
+		allow.click();
 	}
 	
-	public void registrarFecha() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[17]/android.view.ViewGroup"));
-		AndroidElement mes1 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[17]/android.view.ViewGroup");
-		mes1.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup"));
-		AndroidElement mes2 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup");
-		mes2.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup"));
-		AndroidElement dia1 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup");
-		dia1.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup"));
-		AndroidElement dia2 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup");
-		dia2.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup"));
-		AndroidElement anio1 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup");
-		anio1.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup"));
-		AndroidElement anio2 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup");
-		anio2.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup"));
-		AndroidElement anio3 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup");
-		anio3.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup"));
-		AndroidElement anio4 = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup");
-		anio4.click();
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]"));
-		AndroidElement continuarFecha = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]");
-		continuarFecha.click();
+	public void registerPhone() {
+		String editTextPhonePath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView";
+		waitVisibility(By.xpath(editTextPhonePath));
+		AndroidElement numberPhone = getDriver().findElementByXPath(editTextPhonePath);
+		numberPhone.click();
+		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView"));
+		numberPhone.clear();
+		numberPhone.sendKeys("9531057452");
+		
+		String btnNextPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[5]";
+		waitVisibility(By.xpath(btnNextPath));
+		AndroidElement continuarNumero = getDriver().findElementByXPath(btnNextPath);
+		continuarNumero.click();
+		waitVisibility(By.xpath(btnNextPath));
+	}
+	
+	public void registerBirthDay() {
+		String dayx = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup";
+		String dayxx= "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup";
+		waitVisibility(By.xpath(dayx));
+		AndroidElement x1 = getDriver().findElementByXPath(dayx);
+		x1.sendKeys("1");
+		waitVisibility(By.xpath(dayxx));
+		AndroidElement x2 = getDriver().findElementByXPath(dayxx);
+		x2.sendKeys("1");
+		
+		
+		String MM1 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[17]/android.view.ViewGroup";
+		String MM2= "hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup";
+		waitVisibility(By.xpath(MM1));
+		AndroidElement m1 = getDriver().findElementByXPath(MM1);
+		m1.sendKeys("1");
+		waitVisibility(By.xpath(MM2));
+		AndroidElement m2 = getDriver().findElementByXPath(MM2);
+		m2.sendKeys("0");
+		waitVisibility(By.xpath(MM2));
+		
+		String Y1 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup";
+		String Y2 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup\"";
+		String Y3 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup";
+		String Y4 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup";
+		String BtnNext = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[6]";
+		AndroidElement YYYY1 = getDriver().findElementByXPath(Y1);
+		YYYY1.sendKeys("1");
+		waitVisibility(By.xpath(Y2));
+		AndroidElement YYYY2 = getDriver().findElementByXPath(Y2);
+		YYYY2.sendKeys("9");
+		waitVisibility(By.xpath(Y3));
+		AndroidElement YYYY3 = getDriver().findElementByXPath(Y3);
+		YYYY3.sendKeys("9");
+		waitVisibility(By.xpath(Y4));
+		AndroidElement YYYY4 = getDriver().findElementByXPath(Y4);
+		YYYY4.sendKeys("1");
+		
+		waitVisibility(By.xpath(BtnNext));
+		AndroidElement btnSig = getDriver().findElementByXPath(BtnNext);
+		btnSig.click();
 		}
 	
-	public void genero() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[2]"));	
-		AndroidElement genero = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[2]");
-		genero.click();
+	public void genus() {
+		String sexPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup[2]";
+		waitVisibility(By.xpath(sexPath));	
+		AndroidElement gender = getDriver().findElementByXPath(sexPath);
+		gender.click();
 	}
 	
-	public void password() {
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView"));	
-		AndroidElement contrasenia = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView");
-		contrasenia.click();
-		contrasenia.sendKeys("Kariibigby1");
-		waitVisibility(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]"));
-		AndroidElement registrarContrasenia = getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[9]");
-		registrarContrasenia .click();
+	public void RegisterPassword() {
+		String EditTextpwdxPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.MultiAutoCompleteTextView";
+		waitVisibility(By.xpath(EditTextpwdxPath));	
+		AndroidElement pwd = getDriver().findElementByXPath(EditTextpwdxPath);
+		pwd.click();
+		pwd.sendKeys("TestQaPassword1");
+		
+		//TapButtonRegisterAccount
+		String btnRegisterXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[10]";
+		waitVisibility(By.xpath(btnRegisterXpath));
+		AndroidElement btnRegister = getDriver().findElementByXPath(btnRegisterXpath);
+		btnRegister.click();
 	}
 	
 }
